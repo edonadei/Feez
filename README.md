@@ -1,5 +1,17 @@
-# Template React/Tailwind CSS
+# Feez
 
-## What's the use of this template
+A web app to get the fees of the services you love.
 
-You can boostrap a create-react-app tailwind configuration out of the box, just `npm i` and `npm start` 
+## Web APP
+A simple dashboard with easy filtering for the service you need
+
+## API
+A GraphQL API, the structure will be category --> Brand --> Service
+
+## Roadmap
+- Twilio
+- Stripe
+- AWS
+- Azure
+- GCP
+- More to come ...
