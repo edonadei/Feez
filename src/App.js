@@ -1,9 +1,13 @@
 import React from "react";
-import {Signin} from "./pages/Signin"
+import Dashboard from "views/Dashboard";
+import { Route, Redirect } from "react-router-dom";
 
 function App() {
   return (
-    <Signin />
+    <React.Fragment>
+      <Route path="/dashboard" component={Dashboard} />
+      <Redirect from="/" to="/dashboard" />
+    </React.Fragment>
   );
 }
 
