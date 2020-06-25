@@ -1,12 +1,15 @@
 import React from "react";
-import Dashboard from "views/Dashboard";
-import { Route, Redirect } from "react-router-dom";
+import { Route } from "react-router-dom";
+import { Header } from "components/Header";
+import HomeLayout from "views/HomeLayout";
+import { ServiceLayout } from "views/ServiceLayout";
 
 function App() {
   return (
     <React.Fragment>
-      <Route path="/dashboard" component={Dashboard} />
-      <Redirect from="/" to="/dashboard" />
+      <Header />
+      <Route exact path="/" component={HomeLayout} />
+      <Route path="/service/:name" component={ServiceLayout} />
     </React.Fragment>
   );
 }

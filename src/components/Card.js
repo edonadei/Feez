@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export const Card = ({ title, serviceList, color, backgroundTone }) => {
   return (
@@ -8,9 +9,11 @@ export const Card = ({ title, serviceList, color, backgroundTone }) => {
       </h1>
       {serviceList.map(service => {
         return (
-          <div class="text-xl text-gray-800">
-            {service}
-          </div>
+          <Link to={`/service/${service}`} serviceName={service}>
+            <div class="text-xl text-gray-800">
+              {service}
+            </div>
+          </Link>
         );
       })}
       <div class="mb-2" />
